@@ -9,3 +9,8 @@ set tabstop=4
 set shiftwidth=4
 " or set shiftwidth=2
 set expandtab
+
+" before pasting in vim do
+" :set paste
+" and after pasting
+" :set nopaste
