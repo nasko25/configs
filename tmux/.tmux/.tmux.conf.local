@@ -294,3 +294,6 @@ set -g mouse on
 
 # move status line to top
 #set -g status-position top
+
+# change the default terminal so CTRL+movement works properly in vim
+set -g default-terminal "xterm-256color"
