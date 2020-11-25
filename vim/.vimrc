@@ -14,3 +14,5 @@ set expandtab
 " :set paste
 " and after pasting
 " :set nopaste
+
+set runtimepath^=~/.vim/bundle/ctrlp.vim
