@@ -16,3 +16,6 @@ set expandtab
 " :set nopaste
 
 set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" enable mouse
+set mouse=a
