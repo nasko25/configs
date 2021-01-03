@@ -1,0 +1,21 @@
+How to comment out multiple lines with vim:
+
+"
+Put your cursor on the first '#' character, press Ctrl+V (or Ctrl+Q for gVim), and go down until the last commented line and press 'x', that will delete all the '#' characters vertically.
+
+For commenting a block of text is almost the same:
+
+
+1. First, go to the first line you want to comment, press Ctrl+V. This will put the editor in the VISUAL BLOCK mode.
+
+2. Then using the arrow key and select until the last line
+
+3. Now press Shift+I, which will put the editor in INSERT mode and then press '#'. This will add a hash to the first line.
+
+4. Then press Esc (give it a second), and it will insert a '#' character on all other selected lines.
+
+
+For the stripped-down version of vim shipped with debian/ubuntu by default, type : s/^/# in the third step instead (any remaining highlighting of the first character of each line can be removed with :nohl).
+"
+
+Source: https://stackoverflow.com/a/1676690/14628119
