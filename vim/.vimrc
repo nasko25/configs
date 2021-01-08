@@ -19,3 +19,7 @@ set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " enable mouse
 set mouse=a
+
+" highlight search matches
+" :nohlsearch   - to diable temporarily
+set hlsearch
