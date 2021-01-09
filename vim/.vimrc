@@ -29,44 +29,6 @@ set tw=500
 "       Amir Salihefendic — @amix3k
 "       https://github.com/amix/
 
-
-""""""""""""""""""""""""""""""
-" => Status line
-""""""""""""""""""""""""""""""
-" Always show the status line
-set laststatus=2
-
-" Format the status line
-set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
-
-
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" => Spell checking
-"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pressing ,ss will toggle and untoggle spell checking
-map <leader>ss :setlocal spell!<cr>
-
-" Shortcuts using <leader>
-map <leader>sn ]s
-map <leader>sp [s
-map <leader>sa zg
-map <leader>s? z=
-
-
-" Use the CtrlP plugin
-" (type :CtrlP to start)
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
-" enable mouse
-set mouse=a
-
-" highlight search matches
-" :nohlsearch   - to diable temporarily
-set hlsearch
-
-" highlight search phrases while typing
-set incsearch 
-
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => General
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -105,6 +67,43 @@ set hid
 " Configure backspace so it acts as it should act
 set backspace=eol,start,indent
 set whichwrap+=<,>,h,l
+
+""""""""""""""""""""""""""""""
+" => Status line
+""""""""""""""""""""""""""""""
+" Always show the status line
+set laststatus=2
+
+" Format the status line
+set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" => Spell checking
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Pressing ,ss will toggle and untoggle spell checking
+map <leader>ss :setlocal spell!<cr>
+
+" Shortcuts using <leader>
+map <leader>sn ]s
+map <leader>sp [s
+map <leader>sa zg
+map <leader>s? z=
+
+
+" Use the CtrlP plugin
+" (type :CtrlP to start)
+set runtimepath^=~/.vim/bundle/ctrlp.vim
+
+" enable mouse
+set mouse=a
+
+" highlight search matches
+" :nohlsearch   - to diable temporarily
+set hlsearch
+
+" highlight search phrases while typing
+set incsearch 
 
 
 """"""""""""""""""""""""""""""
