@@ -4,11 +4,20 @@ syntax on
 colo slate
 filetype plugin indent on
 
+" use spaces instead of tabs
+set expandtab
+" be smart when using tabs
+set smarttab
+
+" 1 tab is 4 spaces
 set tabstop=4
 " or set softtabstop=2
 set shiftwidth=4
 " or set shiftwidth=2
-set expandtab
+
+" Linebreak on 500 characters
+set lbr
+set tw=500
 
 " before pasting in vim do
 " :set paste
@@ -82,6 +91,21 @@ nmap <leader>w :w!<cr>
 " :W sudo saves the file 
 " (useful for handling the permission-denied error)
 command! W execute 'w !sudo tee % > /dev/null' <bar> edit!
+
+
+"Always show current position
+set ruler
+
+" Height of the command bar
+set cmdheight=1
+
+" A buffer becomes hidden when it is abandoned
+set hid
+
+" Configure backspace so it acts as it should act
+set backspace=eol,start,indent
+set whichwrap+=<,>,h,l
+
 
 """"""""""""""""""""""""""""""
 " => Visual mode related
@@ -236,6 +260,15 @@ endif
 " Delete trailing white space on save, useful for some filetypes ;)
 fun! CleanExtraSpaces()
     let save_cursor = getpos(".")
+    let old_query = getreg('/')
+    silent! %s/\s\+$//e
+    call setpos('.', save_cursor)
+    call setreg('/', old_query)
+endfun
+
+if has("autocmd")
+    autocmd BufWritePre *.txt,*.js,*.py,*.wiki,*.sh,*.coffee :call CleanExtraSpaces()
+endif
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Helper functions
