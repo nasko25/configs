@@ -1,0 +1,3 @@
+in order to copy to the OS buffer, you need to have xclip installed, so:
+
+apt install xclip
