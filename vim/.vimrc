@@ -24,6 +24,13 @@ set tw=500
 " and after pasting
 " :set nopaste
 
+" use `:set list` to display whitespace characters (spaces are still invisible)
+" this determines how the invisible characters are displayed:
+:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+" use `:set nolist` to hide them
+
+" `"+y` to copy to OS clipboard (and `"+p` to paste)
+
 """"""""""""""""""""""""""""""
 " Source:
 "       Amir Salihefendic — @amix3k
