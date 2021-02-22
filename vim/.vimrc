@@ -30,6 +30,8 @@ set tw=500
 " use `:set nolist` to hide them
 
 " `"+y` to copy to OS clipboard (and `"+p` to paste)
+" (needs vim-gtk to work; default vim does not work)
+" also `"_d` to delete without saving what you have deleted
 
 """"""""""""""""""""""""""""""
 " Source:
