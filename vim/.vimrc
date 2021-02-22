@@ -26,8 +26,9 @@ set tw=500
 
 " use `:set list` to display whitespace characters (spaces are still invisible)
 " this determines how the invisible characters are displayed:
-:set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
+set listchars=eol:$,tab:>-,trail:~,extends:>,precedes:<
 " use `:set nolist` to hide them
+set list
 
 " `"+y` to copy to OS clipboard (and `"+p` to paste)
 " (needs vim-gtk to work; default vim does not work)
