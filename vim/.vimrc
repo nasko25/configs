@@ -87,6 +87,12 @@ set laststatus=2
 " Format the status line
 set statusline=\ %{HasPaste()}%F%m%r%h\ %w\ \ CWD:\ %r%{getcwd()}%h\ \ \ Line:\ %l\ \ Column:\ %c
 
+hi StatusLine ctermbg=black ctermfg=gray cterm=NONE
+
+" Tab Line
+hi TabLineFill ctermfg=black
+hi TabLine ctermfg=white ctermbg=black
+hi TabLineSel ctermfg=gray ctermbg=17
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Spell checking
