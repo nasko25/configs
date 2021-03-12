@@ -280,6 +280,15 @@ tmux_conf_copy_to_os_clipboard=true
 # start with mouse mode enabled
 set -g mouse on
 
+# disable "release mouse drag to copy and exit copy-mode", ref: https://github.com/tmux/tmux/issues/140
+unbind-key -T copy-mode MouseDragEnd1Pane
+
+# since MouseDragEnd1Pane neither exit copy-mode nor clear selection now,
+# let single click do selection clearing for us.
+bind-key -T copy-mode MouseDown1Pane select-pane\; send-keys -X clear-selection
+
+# now if you want to copy a selection, you have to use Alt-w
+
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
