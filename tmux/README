@@ -1,3 +1,14 @@
 in order to copy to the OS buffer, you need to have xclip installed, so:
 
 apt install xclip
+
+
+
+Copying:
+
+    1. Either scroll with the mouse or enter   Ctrl+A-[   ( or more generally:  <tmux-binding>-[  ) to enter copy-mode.
+    2. Then scroll, or navigate with Page-Up/Page-Down/Up/Down keys.
+    3. When you find what you want to copy: either select it with the mouse or:
+        3.1. Ctrl-Space to enter "highlight mode".
+        3.2. Navigate with Up/Down/Left/Right/Page-Up/Page-Down keys to highligh a selection.
+    4. Press Alt-w to copy and leave copy-mode.
