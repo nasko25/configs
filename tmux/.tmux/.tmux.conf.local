@@ -142,9 +142,10 @@ tmux_conf_theme_window_status_activity_attr='underscore'
 #tmux_conf_theme_window_status_bell_attr='blink,bold'
 
 # window last status style
-tmux_conf_theme_window_status_last_fg='default'         # light blue
+tmux_conf_theme_window_status_last_fg='colour137'         # was default    # make the last window status color (of only the window number) the same color as the current window status color (of only the window index)
 #tmux_conf_theme_window_status_last_bg='default'
 #tmux_conf_theme_window_status_last_attr='none'
+tmux_conf_theme_window_status_last_format='#I#[fg=colour250]:#[fg=colour255]#W#[fg=colour50]#F'
 
 # status left/right sections separators
 tmux_conf_theme_left_separator_main=''
