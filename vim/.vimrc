@@ -34,6 +34,10 @@ set list
 " (needs vim-gtk to work; default vim does not work)
 " also `"_d` to delete without saving what you have deleted
 
+" enable smart indent
+" use `:set nosmartindent` to disable
+set smartindent
+
 """"""""""""""""""""""""""""""
 " Source:
 "       Amir Salihefendic — @amix3k
