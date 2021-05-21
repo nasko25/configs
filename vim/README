@@ -1,4 +1,4 @@
-To copy to clipboard from vim:
+To copy to clipboard from vim (it requires gvim):
 
 Yank to the OS clipboard: "+y
 Paste from the OS clipboard: "+p
