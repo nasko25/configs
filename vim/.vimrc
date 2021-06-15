@@ -1,4 +1,8 @@
 set number
+" show relative line numbers
+" (only the current line number will not be relative because of the 'set number')
+set relativenumber
+
 syntax on
 " color desert is also cool
 colo slate
