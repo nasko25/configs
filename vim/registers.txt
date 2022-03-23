@@ -1,0 +1,22 @@
+REGISTERS
+read-only:
+".      is a default register that stands for the last thing written
+"%      is a register that holds the directory of where vim was opened
+
+
+"a      for any character `a` can be used as a register
+
+for example: "1yy   saves tha line to register `1`
+             "ayy   saves the line to regsiter `a`
+
+"+      is a register reserved to the OS clipboard
+
+
+
+
+BUFFERS
+by editing different files (:e) they are opened in a buffer
+
+:ls                 to list buffers
+:b<buffer_number>   to go to <buffer_number> buffer
+:bd                 to delete current buffer (will fail if not saved; can use ! to force)
