@@ -1,0 +1,8 @@
+<F5> to refresh cache
+
+<ctrl> + t - open in new tab
+<ctrl> + v - open as vertical pane
+<ctrl> + x - open as horizontal pane
+<ctrl> + z - mark/unmark files to open (<ctrl> + o) them in bulk
+
+<ctrl> + f / <ctrl> + b - to cycle between modes
