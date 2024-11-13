@@ -286,6 +286,7 @@ set -g mouse on
 
 # disable "release mouse drag to copy and exit copy-mode", ref: https://github.com/tmux/tmux/issues/140
 unbind-key -T copy-mode MouseDragEnd1Pane
+unbind-key -T copy-mode-vi MouseDragEnd1Pane
 
 # since MouseDragEnd1Pane neither exit copy-mode nor clear selection now,
 # let single click do selection clearing for us.
