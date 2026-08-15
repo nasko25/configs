@@ -1,0 +1,15 @@
+Herdr shortcuts
+===============
+
+`Ctrl-a` is a prefix: press `Ctrl-a`, release it, then press the command key.
+
+Navigation
+----------
+
+- `Ctrl-a f`: open the session navigator; search or use `j`/`k`, then press `Enter`.
+- `Ctrl-a k` or `Ctrl-a Up`: previous workspace.
+- `Ctrl-a j` or `Ctrl-a Down`: next workspace.
+- `Ctrl-a h` or `Ctrl-a Left`: previous tab.
+- `Ctrl-a l` or `Ctrl-a Right`: next tab.
+- `Ctrl-a Shift-a`: previous agent.
+- `Ctrl-a a`: next agent.

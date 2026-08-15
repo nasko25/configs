@@ -1,0 +1,77 @@
+# tmux-compatible bindings from tmux/.tmux, for Herdr 0.8.x.
+[keys]
+prefix = "ctrl+a"
+
+help = "prefix+?"
+settings = ""
+new_workspace = "prefix+ctrl+c"
+new_worktree = ""
+rename_workspace = "prefix+$"
+close_workspace = ""
+workspace_picker = ["prefix+w", "prefix+s"]
+goto = ["prefix+ctrl+f", "prefix+f", "prefix+quote"]
+detach = "prefix+d"
+reload_config = "prefix+r"
+open_notification_target = ""
+previous_workspace = ["prefix+(", "prefix+k", "prefix+up"]
+next_workspace = ["prefix+)", "prefix+j", "prefix+down"]
+previous_agent = "prefix+shift+a"
+next_agent = "prefix+a"
+
+new_tab = "prefix+c"
+rename_tab = "prefix+comma"
+previous_tab = ["prefix+p", "prefix+h", "prefix+left"]
+next_tab = ["prefix+n", "prefix+l", "prefix+right"]
+switch_tab = "prefix+1..9"
+close_tab = "prefix+ampersand"
+rename_pane = ""
+edit_scrollback = ""
+copy_mode = ["prefix+enter", "prefix+["]
+
+focus_pane_left = ""
+focus_pane_down = ""
+focus_pane_up = ""
+focus_pane_right = ""
+swap_pane_left = ""
+swap_pane_down = ["prefix+>", "prefix+}"]
+swap_pane_up = ["prefix+<", "prefix+{"]
+swap_pane_right = ""
+cycle_pane_next = "prefix+o"
+cycle_pane_previous = ""
+last_pane = ["prefix+tab", "prefix+semicolon"]
+split_vertical = ["prefix+_", "prefix+percent"]
+split_horizontal = ["prefix+minus", "prefix+double_quote"]
+close_pane = "prefix+x"
+zoom = ["prefix+plus", "prefix+z"]
+resize_mode = ""
+toggle_sidebar = ""
+
+[[keys.command]]
+key = "prefix+e"
+type = "pane"
+command = "${EDITOR:-vim} \"$HOME/.config/herdr/config.toml\" && \"$HERDR_BIN_PATH\" server reload-config"
+description = "edit and reload Herdr config"
+
+[[keys.command]]
+key = ["prefix+shift+h", "prefix+alt+left", "prefix+ctrl+left"]
+type = "shell"
+command = "\"$HERDR_BIN_PATH\" pane resize --direction left --current"
+description = "resize pane left"
+
+[[keys.command]]
+key = ["prefix+shift+j", "prefix+alt+down", "prefix+ctrl+down"]
+type = "shell"
+command = "\"$HERDR_BIN_PATH\" pane resize --direction down --current"
+description = "resize pane down"
+
+[[keys.command]]
+key = ["prefix+shift+k", "prefix+alt+up", "prefix+ctrl+up"]
+type = "shell"
+command = "\"$HERDR_BIN_PATH\" pane resize --direction up --current"
+description = "resize pane up"
+
+[[keys.command]]
+key = ["prefix+shift+l", "prefix+alt+right", "prefix+ctrl+right"]
+type = "shell"
+command = "\"$HERDR_BIN_PATH\" pane resize --direction right --current"
+description = "resize pane right"
