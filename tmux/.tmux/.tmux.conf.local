@@ -99,7 +99,6 @@ tmux_conf_theme_status_attr='none'
 #     - #{username}
 #     - #{username_ssh}
 # tmux_conf_theme_terminal_title='#h ❐ #S ● #I #W'
-tmux_conf_theme_terminal_title='● #I #W'
 
 # window status style
 #   - built-in variables are:
@@ -298,7 +297,7 @@ bind-key -T copy-mode-vi MouseDown1Pane select-pane\; send-keys -X clear-selecti
 # force Vi mode
 #   really you should export VISUAL or EDITOR environment variable, see manual
 #set -g status-keys vi
-#set -g mode-keys vi
+set -g mode-keys vi #!important
 
 # replace C-b by C-a instead of using both prefixes
 set -gu prefix2
@@ -312,3 +311,20 @@ bind C-a send-prefix
 
 # change the default terminal so CTRL+movement works properly in vim
 set -g default-terminal "xterm-256color"
+
+# keep the existing n/p window navigation
+unbind C-h #!important
+unbind C-l #!important
+bind n next-window #!important
+bind p previous-window #!important
+
+# clear the visible pane and its scrollback
+bind -n C-l send-keys C-l \; run 'sleep 0.1' \; clear-history #!important
+
+# disable unused full-pane helper integrations
+unbind F #!important
+unbind U #!important
+
+# keep host, session, and process names out of the terminal title
+set -g set-titles off #!important
+set -g set-titles-string 'tmux' #!important
