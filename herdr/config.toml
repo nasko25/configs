@@ -75,3 +75,6 @@ key = ["prefix+shift+l", "prefix+alt+right", "prefix+ctrl+right"]
 type = "shell"
 command = "\"$HERDR_BIN_PATH\" pane resize --direction right --current"
 description = "resize pane right"
+
+[ui]
+tab_bar_position = "bottom"
