@@ -39,7 +39,7 @@ zstyle ':omz:update' mode disabled
 # DISABLE_LS_COLORS="true"
 
 # Uncomment the following line to disable auto-setting terminal title.
-DISABLE_AUTO_TITLE="true"
+# DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
 # ENABLE_CORRECTION="true"
@@ -51,6 +51,9 @@ DISABLE_AUTO_TITLE="true"
 # under VCS as dirty. This makes repository status check for large repositories
 # much, much faster.
 # DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# keep history forever
+HISTSIZE=9223372036854775807
 
 # Uncomment the following line if you want to change the command execution time
 # stamp shown in the history command output.
@@ -73,8 +76,8 @@ plugins=(git vagrant zsh-autosuggestions zsh-syntax-highlighting)
 source $ZSH/oh-my-zsh.sh
 
 # Minimal prompt for screen sharing: no user, host, path, or Git metadata.
-PROMPT='%F{cyan}%#%f '
-RPROMPT=
+# PROMPT='%F{cyan}%#%f '
+# RPROMPT=
 
 # User configuration
 
@@ -94,9 +97,17 @@ RPROMPT=
 # export ARCHFLAGS="-arch x86_64"
 
 # start tmux automatically
-if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ]; then
+if command -v tmux &> /dev/null && [ -n "$PS1" ] && [[ ! "$TERM" =~ screen ]] && [[ ! "$TERM" =~ tmux ]] && [ -z "$TMUX" ] && [ -z "$SKIP_TMUX" ]; then
       exec tmux
 fi
+# if you want to skip starting tmux you can set up your terminal app to run `/usr/bin/env SKIP_TMUX=1 /bin/zsh -l` before starting
+
+export APIFY_CLI_DISABLE_TELEMETRY=1
+export DOTNET_CLI_TELEMETRY_OPTOUT='1'
+export OPENSPEC_TELEMETRY=0
+
+# temporary - only needed for iterm2 (if I no longer use it, it's okay to remove it)
+eval "$(/opt/homebrew/bin/brew shellenv)"
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -111,3 +122,12 @@ alias ll="ls -la"
 alias l="ls -l"
 
 alias ff="firefox"
+
+alias loom='/Users/asdf/Documents/loom/build/loom'
+alias c=code
+alias z=zed
+alias zz='zed .'
+alias ccc='code .'
+
+autoload -U +X bashcompinit && bashcompinit
+alias rgrep="grep -R"
