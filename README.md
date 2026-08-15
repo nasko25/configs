@@ -3,8 +3,8 @@ These are some configs that I use. I know they are pretty basic, but it is easie
 
 ## TODO
 - Maybe add a bash script that auto installs the config files.
-- Cite the third-party plugins.
 
 ## References
-- The tmux config is almost entirely taken from [Oh-My-Tmux](https://github.com/gpakosz/.tmux).
-- The zsh config is almost entirely taken from [Oh-My-Zsh](https://github.com/ohmyzsh/ohmyzsh). The reason I included some of the folders from there is because some of the plugins I use, I have found elsewhere on github, but don't remember which.
+- The tmux config vendors [Oh My Tmux](https://github.com/gpakosz/.tmux) at commit [`58a3dcc`](https://github.com/gpakosz/.tmux/commit/58a3dcc0d718ec0fa1c0d5a2fddd640a1ad7a5b7).
+- [Oh My Zsh](https://github.com/ohmyzsh/ohmyzsh) is installed separately and provides the `git` and `vagrant` plugins.
+- Custom plugins are [zsh-autosuggestions v0.7.1](https://github.com/zsh-users/zsh-autosuggestions/tree/v0.7.1) and [zsh-syntax-highlighting 0.8.0](https://github.com/zsh-users/zsh-syntax-highlighting/tree/0.8.0).
