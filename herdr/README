@@ -7,9 +7,11 @@ Navigation
 ----------
 
 - `Ctrl-a f`: open the session navigator; search or use `j`/`k`, then press `Enter`.
-- `Ctrl-a k` or `Ctrl-a Up`: previous workspace.
-- `Ctrl-a j` or `Ctrl-a Down`: next workspace.
-- `Ctrl-a h` or `Ctrl-a Left`: previous tab.
-- `Ctrl-a l` or `Ctrl-a Right`: next tab.
+- `Ctrl-a h/j/k/l` or the matching arrow: focus the pane in that direction.
+- `Ctrl-a Tab` / `Ctrl-a Shift-Tab`: cycle tabs (tmux windows) forward / backward.
+- `Ctrl-a ;`: return to the last pane.
+- `Ctrl-a w`: open workspace navigation; use `h`/`k`/`Up` for previous or `j`/`l`/`Down` for next.
+- `Ctrl-a (` / `Ctrl-a )`: previous / next workspace.
+- `Ctrl-a p` / `Ctrl-a n`: previous / next tab.
 - `Ctrl-a Shift-a`: previous agent.
 - `Ctrl-a a`: next agent.

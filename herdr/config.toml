@@ -1,3 +1,4 @@
+onboarding = false
 # tmux-compatible bindings from tmux/.tmux, for Herdr 0.8.x.
 [keys]
 prefix = "ctrl+a"
@@ -13,38 +14,46 @@ goto = ["prefix+ctrl+f", "prefix+f", "prefix+quote"]
 detach = "prefix+d"
 reload_config = "prefix+r"
 open_notification_target = ""
-previous_workspace = ["prefix+(", "prefix+k", "prefix+up"]
-next_workspace = ["prefix+)", "prefix+j", "prefix+down"]
+previous_workspace = "prefix+("
+next_workspace = "prefix+)"
 previous_agent = "prefix+shift+a"
 next_agent = "prefix+a"
 
 new_tab = "prefix+c"
 rename_tab = "prefix+comma"
-previous_tab = ["prefix+p", "prefix+h", "prefix+left"]
-next_tab = ["prefix+n", "prefix+l", "prefix+right"]
+previous_tab = ["prefix+p", "prefix+shift+tab"]
+next_tab = ["prefix+n", "prefix+tab"]
 switch_tab = "prefix+1..9"
 close_tab = "prefix+ampersand"
 rename_pane = ""
 edit_scrollback = ""
 copy_mode = ["prefix+enter", "prefix+["]
 
-focus_pane_left = ""
-focus_pane_down = ""
-focus_pane_up = ""
-focus_pane_right = ""
+focus_pane_left = ["prefix+h", "prefix+left"]
+focus_pane_down = ["prefix+j", "prefix+down"]
+focus_pane_up = ["prefix+k", "prefix+up"]
+focus_pane_right = ["prefix+l", "prefix+right"]
 swap_pane_left = ""
 swap_pane_down = ["prefix+>", "prefix+}"]
 swap_pane_up = ["prefix+<", "prefix+{"]
 swap_pane_right = ""
 cycle_pane_next = "prefix+o"
 cycle_pane_previous = ""
-last_pane = ["prefix+tab", "prefix+semicolon"]
+last_pane = "prefix+semicolon"
 split_vertical = ["prefix+_", "prefix+percent"]
 split_horizontal = ["prefix+minus", "prefix+double_quote"]
 close_pane = "prefix+x"
 zoom = ["prefix+plus", "prefix+z"]
 resize_mode = ""
 toggle_sidebar = ""
+
+# Ctrl-a+w opens navigate mode; h/j/k/l and up/down switch workspaces there.
+navigate_workspace_up = ["h", "k", "up"]
+navigate_workspace_down = ["j", "l", "down"]
+navigate_pane_left = ""
+navigate_pane_down = ""
+navigate_pane_up = ""
+navigate_pane_right = ""
 
 [[keys.command]]
 key = "prefix+e"
@@ -78,3 +87,8 @@ description = "resize pane right"
 
 [ui]
 tab_bar_position = "bottom"
+show_agent_labels_on_pane_borders = false
+
+[theme]
+name = "catppuccin"
+auto_switch = false
