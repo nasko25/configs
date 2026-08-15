@@ -8,10 +8,22 @@ Navigation
 
 - `Ctrl-a f`: open the session navigator; search or use `j`/`k`, then press `Enter`.
 - `Ctrl-a h/j/k/l` or the matching arrow: focus the pane in that direction.
-- `Ctrl-a Tab` / `Ctrl-a Shift-Tab`: cycle tabs (tmux windows) forward / backward.
-- `Ctrl-a ;`: return to the last pane.
+- `Ctrl-a Tab`, `Ctrl-a Shift-Tab`, or `Ctrl-a ;`: return to the last focused pane.
 - `Ctrl-a w`: open workspace navigation; use `h`/`k`/`Up` for previous or `j`/`l`/`Down` for next.
 - `Ctrl-a (` / `Ctrl-a )`: previous / next workspace.
 - `Ctrl-a p` / `Ctrl-a n`: previous / next tab.
 - `Ctrl-a Shift-a`: previous agent.
 - `Ctrl-a a`: next agent.
+
+Tab history approximation
+-------------------------
+
+Herdr 0.8 has no last-tab action, so these shortcuts use `last_pane`. After
+`Ctrl-a p` or `Ctrl-a n` switches tabs, the last focused pane belongs to the
+previous tab; pressing Tab or Shift-Tab therefore returns there, and repeated
+presses toggle between the two tabs like tmux's `last-window`.
+
+The history is global pane history, not tab history. Focusing or creating
+another pane replaces the target, so Tab or Shift-Tab may move within the
+current tab or across workspaces instead of returning to the previously active
+tab. Use `Ctrl-a p` and `Ctrl-a n` for guaranteed tab-order navigation.
