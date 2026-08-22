@@ -25,6 +25,7 @@ ZSH_THEME=""
 
 # Disable Oh My Zsh automatic update checks.
 zstyle ':omz:update' mode disabled
+# run `omz update` periodically to update
 
 # Uncomment the following line to automatically update without prompting.
 # DISABLE_UPDATE_PROMPT="true"
